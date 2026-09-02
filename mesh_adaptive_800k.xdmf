@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid Name="Grid" GridType="Uniform">
+      <Topology TopologyType="Tetrahedron" NumberOfElements="802365">
+        <DataItem DataType="Int" Dimensions="802365 4" Format="HDF">
+          mesh_adaptive_800k.h5:/mesh/cells
+        </DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem DataType="Float" Dimensions="135075 3" Format="HDF" Precision="8">
+          mesh_adaptive_800k.h5:/mesh/points
+        </DataItem>
+      </Geometry>
+      <Attribute Name="region" AttributeType="Scalar" Center="Cell">
+        <DataItem DataType="Int" Dimensions="802365" Format="HDF">
+          mesh_adaptive_800k.h5:/mesh/cell_data
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>
