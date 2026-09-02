@@ -1,0 +1,15 @@
+# Large mesh data -- regenerate with meshing/ scripts, or the .xdmf pointer
+# alone is kept (small metadata; the paired .h5 it references is excluded)
+*.h5
+*.mesh
+
+# Run artifacts
+output/
+
+# Python
+__pycache__/
+*.pyc
+
+# Auto-generated at import time by gpu/ceed_operators.py (JIT source for
+# libCEED) -- not source, regenerated fresh every run
+gpu/dissolve_qfuncs.h
