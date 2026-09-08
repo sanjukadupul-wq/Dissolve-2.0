@@ -180,7 +180,7 @@ class SimulationParameters:
 
     # --- Reaction kinetics ---
     kf: float = 125                 # film formation rate (1/hour)
-    kd: float = 40                  # film dissolution rate (mm^6/(g^2·hour))
+    kd: float = 39                  # film dissolution rate (mm^6/(g^2·hour))
 
     # --- Material densities (g/mm³) ---
     rho_zn: float = 0.00714     # Zn solid density
@@ -189,7 +189,9 @@ class SimulationParameters:
 
     # --- Zn concentration ---
     zn_molar_conc: float = 1.09e-4  # mol/mm³  (Znsolid)
-    zn_boundary_conc: float = 1.00e-5     # g/mm³    (Znbc)
+    # [Zn]_sat = 10 mg/L (paper Table 3) = 1.00e-8 g/mm³. Was 1.00e-5 (10 g/L,
+    # a 1000x mg->g conversion error) until corrected against the paper (2026-09-08).
+    zn_boundary_conc: float = 1.00e-8     # g/mm³    (Znbc)
 
     # --- Diffusion coefficients (mm²/hour) — paper Table 1 (37°C, HBSS) ---
     diff_zn: float = 2.72      # 7.56e-4 mm²/s × 3600

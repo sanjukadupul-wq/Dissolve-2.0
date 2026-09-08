@@ -201,7 +201,7 @@ These parameters define the electrochemical degradation model, species transport
     Default: 125
 --kd
     Passive film dissolution rate (mm⁶/(g²·hour))
-    Default: 40
+    Default: 39
 --k_orr
     Effective oxygen reduction reaction rate used by the surrogate model (mm/hour)
     Default: 0.015
